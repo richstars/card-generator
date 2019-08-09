@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pendaftaran | Disperpuska</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+<script  src="js/jquery.min.js"></script>
+<script  src="js/index.js"></script>
+<script  src="js/bootstrap.js"></script>
+<script  src="js/webcam/webcam.min.js"></script>
+   <script language="JavaScript">
+    Webcam.set({
+      // live preview size
+      width: 600,
+      height: 480,
+      
+      // device capture size
+      dest_width: 640,
+      dest_height: 480,
+      
+      // final cropped size
+      crop_width: 400,
+      crop_height: 400,
+      
+      // format and quality
+      image_format: 'jpeg',
+      jpeg_quality: 100
+    });
+    
+  </script>
+</head>
+
+<body>
+
+  <section class="form-box" >
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12 col-sm-offset-1 col-md-12 col-md-offset-2 col-lg-12 col-lg-offset-3 form-wizard">
+
+          <!-- Form Wizard -->
+          <form role="form" action="#" method="post">
+
+            <h3 style="font-weight: 500;">Dinas Perpustakaan & Kearsipan Kabupaten Batang</h3>
+            <p>Form Pendaftaran Anggota Perpustakaan</p>
+
+            <!-- Form progress -->
+            <div class="form-wizard-steps form-wizard-tolal-steps-4">
+             <div class="form-wizard-progress">
+               <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
+             </div>
+             <!-- Step 1 -->
+             <div class="form-wizard-step active">
+              <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+              <p>Informasi Diri</p>
+            </div>
+            <!-- Step 1 -->
+
+            <!-- Step 2 -->
+            <div class="form-wizard-step">
+              <div class="form-wizard-step-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+              <p>Alamat Lengkap</p>
+            </div>
+            <!-- Step 2 -->
+
+            <!-- Step 3 -->
+            <div class="form-wizard-step">
+              <div class="form-wizard-step-icon"><i class="fa fa-camera" aria-hidden="true"></i></div>
+              <p>Pengambilan Foto</p>
+            </div>
+            <!-- Step 3 -->
+
+            <!-- Step 4 -->
+            <div class="form-wizard-step">
+              <div class="form-wizard-step-icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
+              <p>Preview Kartu</p>
+            </div>
+            <!-- Step 4 -->
+          </div>
+          <!-- Form progress -->
+
+
+          <!-- Form Step 1 -->
+          <fieldset>
+
+           <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Form Data Diri</h4>
+                </div>
+                <div class="card-body">
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-6 col-md-6 col-lg-6">
+                        <label>Nama Depan <span>*</span></label>
+                        <input type="text" name="nama_depan" id="nama_depan" placeholder="Depan" class="form-control required">
+                      </div>
+                      <div class="col-6 col-md-6 col-lg-6">
+                        <label>Nama Belakang <span>*</span></label>
+                        <input type="text" name="nama_belakang" id="nama_belakang" placeholder="Belakang" class="form-control required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-6 col-md-6 col-lg-6">
+                       <label>No. KTP / KK <span>*</span></label>
+                       <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">#</div>
+                        </div>
+                        <input type="text" name="no_ktp" id="no_ktp" class="form-control required">
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Tanggal Lahir <span>*</span></label>
+                        <input type="date" name="tanggal_lahir"  id="tanggal_lahir" class="form-control required">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Jenis Kelamin <span>*</span></label>
+                      <select class="custom-select" name="kab_kot" id="kab_kot">
+                        <option selected="">-- Pilih Jenis Kelamin --</option>
+                        <option value="L">Laki - Laki</option>
+                        <option value="P">Perempuan</option>
+                      </select>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>No. Handphone</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">+62</div>
+                        </div>
+                        <input type="text" class="form-control" name="no_hp" id="no_hp">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Status <span>*</span></label>
+                  <select class="custom-select" name="status" id="status">
+                    <option selected="">-- Pilih Status Anda--</option>
+                    <option>Pelajar</option>
+                    <option>Mahasiswa</option>
+                    <option>Guru</option>
+                    <option>Lain - Lain</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-wizard-buttons" style="margin-top: 20px">
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+      </fieldset>
+      <!-- Form Step 1 -->
+
+      <!-- Form Step 2 -->
+      <fieldset>
+
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h4>Form Data Diri</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Kabupaten / Kota</label>
+                      <select class="custom-select" name="kab_kot" id="kab_kot">
+                        <option selected="">Pilih Kabupaten / Kota</option>
+                        <option>Batang</option>
+                        <option>Pekalongan</option>
+                        <option>Semarang</option>
+                      </select>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Kecamatan</label>
+                      <select class="custom-select" name="kecamatan" id="kecamatan">
+                        <option selected="">Pilih Kecamatan</option>
+                        <option>Warungasem</option>
+                        <option>Batang</option>
+                        <option>Kalisari</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Kode Pos</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">POS</div>
+                        </div>
+                        <input type="text" class="form-control required" name="kode_pos" id="kode_pos">
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <label>Nomor Rumah</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text">RT / RW</span>
+                        </div>
+                        <input type="text" class="form-control required" placeholder="RT">
+                        <input type="text" class="form-control required" placeholder="RW">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Alamat Rumah</label>
+                  <textarea class="form-control required" name="alamat" id="alamat"></textarea>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-wizard-buttons" style="margin-top: 20px">
+          <button type="button" class="btn btn-previous">Previous</button>
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+      </fieldset>
+      <!-- Form Step 2 -->
+
+      <!-- Form Step 3 -->
+      <fieldset>
+
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h4>Foto Kartu Anggota</h4>
+              </div>
+              <div class="card-body">
+               <div class="form-group">
+                  <input type="button" class="form-control btn btn-secondary" value="Akses Kamera" onClick="setup(); $(this).hide().next().show();">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-6 col-md-6 col-lg-6">
+                        <h3 style="padding-top: 20px">LIVE CAM</h3>
+                        <div class="jumbotron text-center" id="my_camera">
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-6 col-lg-6">
+                        <h3 style="padding-top: 20px">RESULT</h3>
+                        <div id="results"></div>
+
+                      </div>
+                      <input type="button" class="form-control btn btn-secondary" value="Ambil Gambar" onClick="take_snapshot();">
+                    </div>
+
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-wizard-buttons" style="margin-top: 20px">
+          <button type="button" class="btn btn-previous">Previous</button>
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+  </fieldset>
+  <!-- Form Step 3 -->
+
+  <!-- Form Step 4 -->
+  <fieldset>
+
+   <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h4>Hasil Kartu Anggota</h4>
+              </div>
+              <div class="card-body">
+               <div class="form-group">
+                  <div class="row">
+                    <div class="col-6 col-md-6 col-lg-6">
+                      <div class="card">
+                        <div class="card-body" align="center">
+                     <canvas id='new' width='380' height='240' style='border:0px solid #000;'>
+                     </canvas>
+                   </div>
+                   </div>
+                   </div>
+                   <div class="col-6 col-md-6 col-lg-6">
+                     <div class="alert alert-light" style="margin-top: 20px">
+                      <b>Note!</b> Tekan Preview Kartu untuk me-refresh kartu Perpustakaan anda.
+                    </div>
+                    <input type="button" class="form-control btn btn-secondary" value="Preview Kartu" onClick="gene();">
+
+                    <div class="custom-control custom-checkbox" style="margin-top: 20px">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1" required="">
+                      <label class="custom-control-label" for="customCheck1">Saya setuju akan menaati / mengikuti peraturan di perpustakaan ini</label>
+                    </div>
+                    <hr  >
+                    <div class="row">
+                     <div class="col-6">
+                       <button class="form-control btn btn-previous" type="reset">Kembali</button>
+                     </div>
+                     <div class="col-6">
+                       <button class="form-control btn btn-submit" type="submit">Simpan</button>
+                     </div></div>
+                   </div>
+
+                 </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</fieldset>
+<!-- Form Step 4 -->
+
+</form>
+<!-- Form Wizard -->
+</div>
+</div>
+
+</div>
+</section>
+
+ <script language="JavaScript">
+  function setup() {
+    Webcam.reset();
+    Webcam.attach( '#my_camera' );
+  }
+
+  function take_snapshot() {
+      // take snapshot and get image data
+      Webcam.snap( function(data_uri) {
+        // display results in page
+        document.getElementById('results').innerHTML = 
+        '<img src="'+data_uri+'" id="uploadPreview"/>';
+      } );
+    }
+  </script>
+  <script>
+
+    var c=document.getElementById('new')
+    var co=c.getContext('2d')
+
+    function save(){
+datau=c.toDataURL('image/jpeg;base64;')//.replace("image/png", "image/octet-stream");
+//window.location.href=datau
+anchor=document.getElementById('download')
+anchor.href=datau
+anchor.innerHTML='Download'
+}
+
+function gene(){
+  depan=document.getElementById('nama_depan').value
+  belakang=document.getElementById('nama_belakang').value
+  nama=depan+' '+belakang;
+  tanggal_lahir=document.getElementById('tanggal_lahir').value
+  kab_kot=document.getElementById('kab_kot').value
+  kecamatan=document.getElementById('kecamatan').value
+  kode_pos=document.getElementById('kode_pos').value
+  alamat=document.getElementById('alamat').value
+  address=kecamatan+' '+kab_kot;
+  if (nama.length||tanggal_lahir.length||alamat.length||address.length>0) 
+  {
+    r=confirm("Do you want to Update  and your Designation is ")
+    if(r==true){
+      c=document.getElementById('new')
+      co=c.getContext('2d')
+      co.clearRect(0,0,380,240)
+      init()
+
+      idnu=kode_pos+Math.random()*10000
+      co.font='18px Arial'
+      co.strokeText(Math.round(idnu),150,115)
+
+
+      co.font='12px Arial'
+      co.fillStyle='#000000'
+      co.fillText('Nama    : '+nama,150,140)
+
+      co.font='12px Arial'
+      co.fillStyle='#000000'
+      co.fillText('TTL       : '+tanggal_lahir,150,155)
+
+      co.font='12px Arial'
+      co.fillStyle='#000000'
+      co.fillText('Jekel     :', 150,170)
+
+      co.font='12px Arial'
+      co.fillStyle='#000000'
+      co.fillText('Alamat  : '+alamat,150,185)
+      co.fillText(address,200,200)
+
+      youphot=document.getElementById('uploadPreview')
+      co.drawImage(youphot,25,100,100,110)
+// document.getElementById('sav').disabled=false
+
+}
+}else{alert('Please Enter your Details') }
+}
+
+function init(){
+
+  grs=co.createLinearGradient(150,243,170,75)
+  grs.addColorStop(1,'#456daf')
+  grs.addColorStop(0,'white')
+  co.fillStyle=grs
+  co.fillRect(0.5,75.5,419,164.5)
+
+  gr=co.createLinearGradient(150,243,170,75)
+  gr.addColorStop(1,'#3847a2')
+  gr.addColorStop(0,'white')
+  co.fillStyle=gr
+  co.fillRect(0,0,150,73.5)
+
+  grd=co.createLinearGradient(150,143,170,75)
+  grd.addColorStop(1,'#3847a2')
+  grd.addColorStop(0,'white')
+  co.fillStyle=grd
+  co.fillRect(150,0,250.5,73.5)
+
+  co.arc(25,35,15,2.2,2*Math.PI)
+  co.fillStyle='#fc544b'
+  co.fill()
+
+  co.moveTo(0,75)
+  co.lineTo(380,75)
+
+  co.font='23px tahoma'
+  co.fillText('PERPUS',48,43)
+
+
+  co.font='11px Arial'
+  co.fillText('Developed by Ricki',270,40)
+
+
+  co.fillStyle="#FFFF00"
+  co.strokeRect(25,100,100,110)
+
+}
+
+
+init()
+
+function first(){
+  co.font='18px Arial'
+  co.strokeText('51252081219970003',150,115)
+
+
+  co.font='12px Arial'
+  co.fillStyle='#000000'
+  co.fillText('Nama    :', 150,140)
+
+  co.font='12px Arial'
+  co.fillStyle='#000000'
+  co.fillText('TTL       :', 150,155)
+
+  co.font='12px Arial'
+  co.fillStyle='#000000'
+  co.fillText('Jekel     :', 150,170)
+
+  co.font='12px Arial'
+  co.fillStyle='#000000'
+  co.fillText('Alamat  :', 150,185)
+
+}
+first()
+
+function rese(){
+  init()
+  first()
+}
+</script>
+
+
+
+</body>
+
+</html>
